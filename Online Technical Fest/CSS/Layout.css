@@ -1,0 +1,191 @@
+/* CSS Document */
+body 
+{
+	margin:0;
+	padding:0;
+	background-color:#FFF;
+	background-image:url(../IMG/BG1.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+
+#Text
+{
+	font-family:"Times New Roman", Times, serif;
+	font-size:24px;
+	font-weight:bold;
+	color:#FF3;
+	text-shadow:0px 0px 10px #000;
+}
+
+
+#Text1
+{
+	font-family:"Times New Roman", Times, serif;
+	font-size:24px;
+	font-weight:bold;
+	color:#FFF;
+	text-shadow:0px 0px 10px #000;
+}
+
+#Text2
+{
+	font-family:"Times New Roman", Times, serif;
+	font-size:28px;
+	font-weight:bold;
+	color:#FFF;
+	text-shadow:0px 0px 10px #009;
+}
+
+
+#Text3
+{
+	font-family:"Times New Roman", Times, serif;
+	font-size:24px;
+	font-weight:bold;
+	color:#FFF;
+	text-shadow:0px 0px 10px #F00;
+}
+
+#Text4
+{
+	font-family:"Times New Roman", Times, serif;
+	font-size:28px;
+	font-weight:bold;
+	color:#000;
+	text-shadow:0px 0px 10px #FFF;
+}
+
+#Holder{
+	width:1000px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:21px;
+	margin-bottom:21px;
+	
+}
+
+#Header{
+		height:130px;
+		background-image:url(../IMG/Logo2.png);
+		background-repeat:no-repeat;
+		margin-bottom:11px;
+		align:right;
+		}
+#PageHeading{
+	height:auto;
+	padding:11px;
+	}	
+#NavBar{
+	height:60px;
+	background-color:rgb(13,13,13)
+		};
+
+#Content{
+	height:auto;
+	clear:both;
+	overflow:auto;
+	}
+
+#ContentLeft{
+	width:280px;
+	float:left;
+	padding-top:11px;
+	padding-left:11px;
+	}
+
+#ContentRight{
+	width:680px;
+	float:right;
+	}
+
+#Footer{
+	height:100px;
+	}
+
+#h1{
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666;
+	font-weight:lighter;
+}
+
+#h2{
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#999;
+	font-weight:lighter;
+}
+#h6{
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#333;
+	font-weight:lighter;
+}
+
+.StyleTextField{
+	border:1px solid #666;
+	border-radius:6px;
+	width:200px;
+	height:35px;
+	padding-left:6px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px;
+	font-weight:bolder;
+	color:#F00;
+}
+
+.StyleButton{
+	border:3px solid #000;
+	background-color:#FFFFFF;
+	border-radius:6px;
+	width:200px;
+	height:35px;
+	padding-left:6px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px;
+	font-weight:bolder;
+}
+
+.StyleButton1{
+	border:3px solid #000;
+	background-color:#FFFFFF;
+	border-radius:6px;	
+	padding-left:6px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px;
+	font-weight:bolder;
+}
+
+.StyleTextField1{
+	
+	border:hidden;
+	background-color:#CCCCCC;
+	border-radius:6px;
+	width:280px;
+	height:35px;
+	padding-left:6px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:30px;
+	font-weight:bolder;
+}
+
+.StyleTextField2{
+	background-color:transparent;
+	font-family:"Times New Roman", Times, serif;
+	font-size:36px;
+	font-weight:bolder;
+	text-decoration:blink;
+	text-outline:#000;
+	color:#FFF;
+	text-shadow:0px 0px 10px #F00;
+	border:none;
+	border-radius:6px;
+	width:300px;
+	height:35px;
+	padding-left:6px;
+	
+}

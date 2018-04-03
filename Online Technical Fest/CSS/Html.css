@@ -1,0 +1,268 @@
+/* CSS Document */
+body 
+	{
+		margin:0;
+		padding:0;
+		background-color:#666;
+		background-image:url(../IMG/1.jpg);
+		background-repeat:no-repeat;
+		background-position:inherit;
+	}
+
+#Holder
+		{
+			width:1024px;
+			height:auto;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top:21px;
+			margin-bottom:21px;
+		}
+
+#name_ban
+		{
+			font-family: HURTM;
+			font-size: 60px;
+			color: #FFFFFF;
+			text-shadow: 0px 0px 20px #FF0000;
+			top: 31px;
+			left: 485px;
+		}
+
+
+#Header 
+		{
+			color: #FFFFFF;
+			position: absolute;
+			TOP: 120px;
+			left: 10px;
+			font-family:"Times New Roman", Times, serif;
+			font-size: 20px;	
+			text-shadow: 0px 0px 10px #FFFF99;
+			cursor: pointer;
+		}
+
+#enter 
+		{
+			color: #FFFFFF;
+            position: absolute;
+			top: 220px;
+			left: 580px;
+			font-family: HURTM;
+			font-size: 30px;
+			text-shadow: 0px 0px 20px #0099FF;
+			cursor: pointer;
+		}
+		
+#fin
+		{
+			position: absolute;
+			top: 270px;
+			right: 584px;
+			width: 40px;
+			height: 47px;
+		}
+
+#Header 
+	{
+		color: #FFFFFF;
+		position: absolute;
+		TOP: 120px;
+		left: 10px;
+		font-family:"Times New Roman", Times, serif;
+		font-size: 20px;	
+		text-shadow: 0px 0px 10px #FFFF99;
+		cursor: pointer;
+	}
+
+
+#arc 
+	{
+		position: absolute;
+		top: 350px;
+		-webkit-transition: all 0.5s ease 0s;
+		-moz-transition: all 0.5s ease 0s;
+		-o-transition: all 0.5s ease 0s;
+		-ms-transition: all 0.5s ease 0s;
+		transition: all 0.5s ease 0s;
+		cursor:pointer;
+	}
+
+#arc:hover 
+	{
+		-webkit-transform: rotate(360deg);
+              	-moz-transform: rotate(360deg);
+              	-ms-transform: rotate(360deg);
+              	-o-transform: rotate(360deg);
+              	transform: rotate(360deg);
+        }
+
+#visit
+	{
+		color: #FFFFFF;
+		position: absolute;
+		bottom: 35px;
+		right: 180px;
+		font-family: HURTM;
+		font-size: 22px;
+		text-shadow: 0px 0px 20px #FF0000;
+		cursor: pointer;
+	}
+
+#likebutton
+	{
+		position: absolute;
+		top: 300px;
+		right: 180px;
+		cursor: pointer;
+	}
+
+#Rec
+	{
+		font-family: HURTM;
+		font-size: 20px;
+		color: #FFFFFF;
+		text-shadow: 0px 0px 20px #FF0000;
+		bottom: 99px;
+		left: 180px;
+	}	
+#notice
+	{
+		font-family: HURTM;
+		font-size: 25px;
+		color: #FFFFFF;
+		text-shadow: 0px 0px 20px #FF0000;
+		position: absolute;
+		top: 220px;
+		right:160px;
+	}
+#rot_notice
+	{
+		font-family: HURTM;
+		font-size: 25px;
+		color: #FFFFFF;
+		text-shadow: 0px 0px 20px #FF0000;
+		position: absolute;
+		top: 390px;
+		right:400px;
+		-ms-transform: rotate(310deg); /* IE 9 */
+            	-webkit-transform: rotate(310deg); /* Chrome, Safari, Opera */
+            	transform: rotate(310deg); /* Standard syntax */
+       }
+	   
+#rot_notice1
+       {
+		font-family: HURTM;
+		font-size: 25px;
+		color: #FFFFFF;
+		text-shadow: 0px 0px 20px #FF0000;
+		position: absolute;
+		top: 390px;
+		right:270px;
+		-ms-transform: rotate(310deg); /* IE 9 */
+            	-webkit-transform: rotate(310deg); /* Chrome, Safari, Opera */
+            	transform: rotate(310deg); /* Standard syntax */
+       }
+
+#rot_notice2
+       {
+		font-family: HURTM;
+		font-size: 25px;
+		color: #FFFFFF;
+		text-shadow: 0px 0px 20px #FF0000;
+		position: absolute;
+		top: 390px;
+		right:180px;
+		-ms-transform: rotate(310deg); /* IE 9 */
+            	-webkit-transform: rotate(310deg); /* Chrome, Safari, Opera */
+            	transform: rotate(310deg); /* Standard syntax */
+       }
+	   
+#list
+	{
+		color: #FFFFFF;
+		position: absolute;
+		top: 220px;
+		left: 180px;
+		font-family: HURTM;
+		font-size: 30px;
+		text-shadow: 0px 0px 20px #33CC33;
+		cursor: pointer;
+	}
+#list1
+	{
+		color: #FFFFFF;
+		position: absolute;
+		top: 250px;
+		left: 180px;
+		font-family: HURTM;
+		font-size: 30px;
+		text-shadow: 0px 0px 20px #33CC33;
+		cursor: pointer;
+	}	
+#logo
+	{
+		position: absolute;
+		top: 210px;
+		right:270px;
+		width: 380px;
+		height:380px;
+	}			  
+
+#logo1
+	{
+		position: absolute;
+		top: 260px;
+		left:160px;
+		width: 300px;
+		height:300px;
+	}	
+
+#table
+	{
+		color: #FFFFFF;
+		position: absolute;
+		top: 235px;
+		right:180px;
+		font-family: HURTM;
+		font-size: 25px;
+		text-shadow: 0px 0px 20px #33CC33;
+	}	
+#table1
+	{
+		color: #FFFFFF;
+		position: absolute;
+		left:35px;
+		font-family: HURTM;
+		font-size: 22px;
+		text-shadow: 0px 0px 20px #33CC33;
+		cursor: pointer;
+	}			  			
+
+#DMC
+	{
+		font-family: HURTM;
+		font-size: 20px;
+		color: #FFFFFF;
+		text-shadow: 0px 0px 20px #FF0000;
+	}	
+#about
+	{
+		font-family: HURTM;
+		font-size: 20px;
+		color: #FFFFFF;
+		text-shadow: 0px 0px 20px #FF0000;
+		
+		
+	}
+#about1
+	{
+		float:right;
+		position:absolute;
+		font-family: HURTM;
+		font-size: 20px;
+		color: #FFFFFF;
+		text-shadow: 0px 0px 20px #FF0000;
+		top: 300px;
+		left:500px;
+	}		

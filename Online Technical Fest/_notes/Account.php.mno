@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_User" value="name:UserID;datatype:int,name:Fname;datatype:string,name:Lname;datatype:string,name:College;datatype:string,name:Course;datatype:string,name:Sem;datatype:string,name:Sid;datatype:int,name:Event;datatype:string,name:Mob;datatype:string,name:Email;datatype:string,name:Username;datatype:string,name:Password;datatype:string,name:Timestamp;datatype:timestamp" />
+	<infoitem key="UD_Event" value="name:Event_Key;datatype:int,name:Event_Name;datatype:string" />
+</info>
