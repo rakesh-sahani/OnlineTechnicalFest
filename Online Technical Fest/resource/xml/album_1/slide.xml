@@ -1,0 +1,67 @@
+<playData>
+<!-- images data area start here ... -->
+<viewItem type="image" startTime="4" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_0.jpg" thumbUrl="resource/res/images/album_1/thumb_0.jpg" />
+</viewItem>
+<viewItem type="image" startTime="8" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_1.jpg" thumbUrl="resource/res/images/album_1/thumb_1.jpg" />
+</viewItem>
+<viewItem type="image" startTime="12" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_2.jpg" thumbUrl="resource/res/images/album_1/thumb_2.jpg" />
+</viewItem>
+<viewItem type="image" startTime="16" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_3.jpg" thumbUrl="resource/res/images/album_1/thumb_3.jpg" />
+</viewItem>
+<viewItem type="image" startTime="20" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_4.jpg" thumbUrl="resource/res/images/album_1/thumb_4.jpg" />
+</viewItem>
+<viewItem type="image" startTime="24" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_5.jpg" thumbUrl="resource/res/images/album_1/thumb_5.jpg" />
+</viewItem>
+<viewItem type="image" startTime="28" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_6.jpg" thumbUrl="resource/res/images/album_1/thumb_6.jpg" />
+</viewItem>
+<viewItem type="image" startTime="32" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_7.jpg" thumbUrl="resource/res/images/album_1/thumb_7.jpg" />
+</viewItem>
+<viewItem type="image" startTime="36" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_8.jpg" thumbUrl="resource/res/images/album_1/thumb_8.jpg" />
+</viewItem>
+<viewItem type="image" startTime="40" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_9.jpg" thumbUrl="resource/res/images/album_1/thumb_9.jpg" />
+</viewItem>
+<viewItem type="image" startTime="44" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_10.jpg" thumbUrl="resource/res/images/album_1/thumb_10.jpg" />
+</viewItem>
+<viewItem type="image" startTime="48" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_11.jpg" thumbUrl="resource/res/images/album_1/thumb_11.jpg" />
+</viewItem>
+<viewItem type="image" startTime="52" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_12.jpg" thumbUrl="resource/res/images/album_1/thumb_12.jpg" />
+</viewItem>
+<viewItem type="image" startTime="56" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_13.jpg" thumbUrl="resource/res/images/album_1/thumb_13.jpg" />
+</viewItem>
+<viewItem type="image" startTime="60" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_14.jpg" thumbUrl="resource/res/images/album_1/thumb_14.jpg" />
+</viewItem>
+<viewItem type="image" startTime="64" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_15.jpg" thumbUrl="resource/res/images/album_1/thumb_15.jpg" />
+</viewItem>
+<viewItem type="image" startTime="68" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_16.jpg" thumbUrl="resource/res/images/album_1/thumb_16.jpg" />
+</viewItem>
+<viewItem type="image" startTime="72" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_17.jpg" thumbUrl="resource/res/images/album_1/thumb_17.jpg" />
+</viewItem>
+<viewItem type="image" startTime="76" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_18.jpg" thumbUrl="resource/res/images/album_1/thumb_18.jpg" />
+</viewItem>
+<viewItem type="image" startTime="80" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_19.jpg" thumbUrl="resource/res/images/album_1/thumb_19.jpg" />
+</viewItem>
+<viewItem type="image" startTime="84" duration="4">
+  <dataInfo size="0" url="resource/res/images/album_1/image_20.jpg" thumbUrl="resource/res/images/album_1/thumb_20.jpg" />
+</viewItem>
+<!-- images data area end -->
+</playData>

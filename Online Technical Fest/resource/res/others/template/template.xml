@@ -1,0 +1,811 @@
+<templete name="temp_Thumbnail_3">
+	<state name="initState">
+		<viewItem type="DrawArea">
+			<showInfo alpha="1" rotation="0">
+				<bounds left="0" right="0" top="0" bottom="0"/>
+			</showInfo>
+			<drawStyle>
+				<colorFill color="[0,0]" alpha="[1,1]"/>
+				<imageFill imgSrc="resource/res/others/template/bg.jpg" fillType="stretch"/>
+			</drawStyle>
+		</viewItem>
+		
+		
+		<viewItem type="Group" id="PlayArea">
+			<!--showInfo alpha="1" rotation="0">
+				<bounds top="124" bottom="62" left="6" right="6"/>
+			</showInfo-->
+			<showInfo alpha="1" rotation="0">
+				<bounds top="34" bottom="62" left="6" right="6"/>
+			</showInfo>
+			<viewItem type="DrawArea">
+				<showInfo alpha="0" rotation="0">
+					<bounds top="0" bottom="0" left="0" right="0"/>
+				</showInfo>
+				<drawStyle>
+					<colorFill color="[0xffffff,0xffffff]" alpha="[1,1]"/>
+				</drawStyle>
+			</viewItem>
+			
+			<viewItem type="PlayArea" id="KEY_PlayArea">
+				<showInfo alpha="1" rotation="0">
+					<bounds top="0" bottom="0" left="0" right="0"/>
+				</showInfo>
+				<playStyle preloadSrc="resource/res/others/template/preloader/1.swf" playType="moveLeft" deionBool="" deionPosition=""/>
+				<descriptionArea type="TextArea" id="KEY_VListVIAlbumCaption">
+					<showInfo alpha="1" rotation="0" showVScrollBar="true">
+						<bounds width="200" height="100" />
+					</showInfo>
+					<!-- textStyle type="htmlText" showScrollBar="true" -->
+					<textStyle showScrollBar="true" type="htmlText">
+						<text></text>
+						<textFormat align="null" size="12" font="Arial" color="0xffffff" bold="false" italic="false" underlineBool="false"/>
+					</textStyle>
+				</descriptionArea>
+			</viewItem>
+			<!--event>
+				<show>
+					<baseEffect name="EffectAlpha" startTime="1" duration="24" startAlpha="0" endAlpha="1"/>
+				</show>
+			</event-->
+		</viewItem>
+		
+		
+		
+		<!-- ============================================================================== -->
+		<viewItem type="Group" id="imageThumbGroup">
+			<showInfo alpha="1" rotation="0">
+				<bounds height="62" left="0" right="0" bottom="0"/>
+			</showInfo>
+			<viewItem type="DrawArea">
+				<showInfo alpha="0.3" rotation="0">
+					<bounds top="10" bottom="-30" left="0" right="0"/>
+				</showInfo>
+				<drawStyle>
+					<colorFill color="[0,0]" alpha="[1,1]" rotation="0"/>
+				</drawStyle>
+			</viewItem>
+			
+			<viewItem type="Button" id="btnHideThumb">
+				<showInfo alpha="1" rotation="0">
+					<bounds hCenter="0" top="0" width="150" height="10"/>
+				</showInfo>
+				<buttonStyle skinSrc="resource/res/others/template/btn/btnHideThumb.swf"/>
+				<event>
+					<!--click>
+						<baseEffect name="changeState" toStateName="thumbState" controlID="KEY_Temp" />
+					</click-->
+					<click>
+						<baseEffect name="changeState" toStateName="thumbState" controlID="KEY_Temp" />
+					</click>
+				</event>
+			</viewItem>
+			
+			<viewItem type="Button" id="btnFrontImgPage">
+				<showInfo alpha="1" rotation="0">
+					<bounds left="5" vCenter="6" width="25" height="40"/>
+				</showInfo>
+				<buttonStyle skinSrc="resource/res/others/template/btn/btnPrev.swf"/>
+				<event>
+					<click>
+						<baseEffect name="frontPhotoPage"/>
+					</click>
+				</event>
+			</viewItem>
+			
+			<viewItem type="ViewListArea" id="KEY_ThumbListArea">
+				<showInfo alpha="1" rotation="0">
+					<bounds  left="48" right="42" top="16" height="40" />
+				</showInfo>
+				<viewListStyle vlStartX="0" vlStartY="0" vlWidthSpace="8" hViewItemCnt="-1" vViewItemCnt="1" pageScrollPosition="vertical" mouseScrollBool="false"/>
+				<viewListItem id="">
+					<showInfo alpha="1" rotation="0">
+						<bounds width="62" height="40"/>
+					</showInfo>
+					<viewItem type="Group" id="Pic">
+						<showInfo alpha="1" rotation="0">
+							<bounds x="0" y="0" width="62" height="40"/>
+						</showInfo>
+						<viewItem type="DrawArea">
+							<showInfo alpha="1" rotation="0">
+								<bounds x="0" y="0" width="62" height="40"/>
+							</showInfo>
+							<drawStyle>
+								<colorFill color="[0xffffff,0xffffff]" alpha="[1,1]"/>
+							</drawStyle>
+						</viewItem>
+						<viewItem type="DrawArea" id="KEY_VListVIImage">
+							<showInfo alpha="1" rotation="0">
+								<bounds top="2" left="2" width="58" height="36"/>
+							</showInfo>
+							<drawStyle>
+								<colorFill color="[0xffffff,0xffffff]" alpha="[1,1]"/>
+							</drawStyle>
+						</viewItem>
+						<viewItem type="DrawArea" id="FlashScreen">
+							<showInfo alpha="0" rotation="0">
+								<bounds x="0" y="0" width="62" height="40"/>
+							</showInfo>
+							<drawStyle>
+								<colorFill color="[0xffffff,0xffffff]" alpha="[1,1]"/>
+							</drawStyle>
+						</viewItem>
+						<viewItem type="DrawArea" id="GradScreen">
+							<showInfo alpha="1" rotation="0">
+								<bounds x="0" y="0" width="62" height="40"/>
+							</showInfo>
+							<drawStyle>
+								<colorFill color="[0,0]" alpha="[0.4,0.4]"/>
+							</drawStyle>
+						</viewItem>
+					</viewItem>
+					<event>
+						<show>
+							<baseEffect name="EffectMove" startTime="0" duration="12" direction="-90" distance="50" moveType="moveFrom" tweenerType="easeOutBack"/>
+							<baseEffect name="EffectAlpha" startTime="0" duration="12" startAlpha="0" endAlpha="1"/>
+						</show>
+						<select>
+							<baseEffect name="EffectAlpha" startTime="0" duration="1" startAlpha="1" endAlpha="0" controlID="FlashScreen"/>
+							<baseEffect name="EffectAlpha" startTime="0" duration="1" startAlpha="1" endAlpha="0" controlID="GradScreen" tweenerType="easeOutCubic"/>
+						</select>
+						<mouseOver>
+							<baseEffect name="EffectAlpha" startTime="0" duration="12" startAlpha="1" endAlpha="0" controlID="FlashScreen"/>
+							<baseEffect name="EffectAlpha" startTime="0" duration="6" startAlpha="1" endAlpha="0" controlID="GradScreen" tweenerType="easeOutCubic"/>
+						</mouseOver>
+						<mouseOut>
+							<baseEffect name="EffectAlpha" startTime="0" duration="6" startAlpha="0" endAlpha="1" controlID="GradScreen" tweenerType="easeOutCubic"/>
+						</mouseOut>
+					</event>
+				</viewListItem>
+			</viewItem>
+			
+			<viewItem type="Button" id="btnNextImgPage">
+				<showInfo alpha="1" rotation="0">
+					<bounds right="5" vCenter="6" width="25" height="40"/>
+				</showInfo>
+				<buttonStyle skinSrc="resource/res/others/template/btn/btnNext.swf"/>
+				<event>
+					<click>
+						<baseEffect name="nextPhotoPage"/>
+					</click>
+				</event>
+			</viewItem>
+			
+			<event>
+				<show>
+					<baseEffect name="EffectMove" startTime="0" duration="36" direction="90" distance="500" moveType="moveFrom" tweenerType="easeOutCubic"/>
+				</show>
+			</event>
+		</viewItem>
+		
+		
+		<!-- ==================================================================================== -->
+		<viewItem type="Group" id="albumThumbGroup">
+			<!--showInfo alpha="1" rotation="0">
+				<bounds right="0" height="100" left="0"  top="24"/>
+			</showInfo-->
+			<showInfo alpha="1" rotation="0">
+				<bounds right="0" height="100" left="0"  top="-66"/>
+			</showInfo>
+			
+			<viewItem type="DrawArea">
+				<showInfo alpha="0.3" rotation="0">
+					<bounds bottom="10" top="-30" left="0" right="0"/>
+				</showInfo>
+				<drawStyle>
+					<colorFill color="[0,0]" alpha="[1,1]" rotation="0"/>
+				</drawStyle>
+			</viewItem>
+			
+			<viewItem type="Button" id="btnHideAlbum">
+				<showInfo alpha="1" rotation="0">
+					<bounds hCenter="0" bottom="0" width="150" height="10"/>
+				</showInfo>
+				<buttonStyle skinSrc="resource/res/others/template/btn/btnHideAlbum.swf"/>
+				<event>
+					<!--click>
+						<baseEffect name="changeState" toStateName="albumState" controlID="KEY_Temp" />
+					</click-->
+					<click>
+						<baseEffect name="changeState" toStateName="albumState" controlID="KEY_Temp" />
+					</click>
+				</event>
+			</viewItem>
+			
+			<viewItem type="Button" id="btnFrontAlbumPage">
+				<showInfo alpha="1" rotation="0">
+					<bounds left="5" vCenter="-2" width="30" height="45"/>
+				</showInfo>
+				<buttonStyle skinSrc="resource/res/others/template/btn/btnUp.swf"/>
+				<event>
+					<click>
+						<baseEffect name="frontAlbumPage"/>
+					</click>
+				</event>
+			</viewItem>
+			
+			<viewItem type="ViewListArea" id="KEY_AlbumListArea">
+				<showInfo alpha="1" rotation="0">
+					<bounds height="90" left="32" right="28" bottom="10"/>
+				</showInfo>
+				<viewListStyle vlStartX="0" vlStartY="0" vlWidthSpace="10" hViewItemCnt="-1" vViewItemCnt="1" pageScrollPosition="vertical" mouseScrollBool="false"/>
+				<viewListItem>
+					<showInfo alpha="1" rotation="0">
+						<bounds width="100" height="85"/>
+					</showInfo>
+					
+					<viewItem type="DrawArea">
+						<showInfo alpha="0" rotation="0">
+							<bounds top="0" left="0" bottom="0" right="0"/>
+						</showInfo>
+						<drawStyle>
+							<colorFill color="[0xff0000,0xff0000]" alpha="[1,1]"/>
+						</drawStyle>
+					</viewItem>			
+									
+					<viewItem type="Group" id="ThumbPic">
+						<showInfo alpha="1" rotation="0">
+							<bounds top="5" left="0" bottom="0" right="0"/>
+						</showInfo>
+						<viewItem type="DrawArea">
+							<showInfo alpha="1" rotation="-8">
+								<bounds height="60" width="80" top="12" left="6"/>
+							</showInfo>
+							<drawStyle>
+								<colorFill color="[0x555555,0x555555]" alpha="[1,1]"/>
+							</drawStyle>
+							<event>
+								<show>
+									<baseEffect name="setFilters">
+										<halation strength="0.3" color="0"/>
+										<shadow alpha="0.3" offset="5" angle="45" color="0"/>
+									</baseEffect>
+								</show>
+							</event>
+						</viewItem>
+						<viewItem type="DrawArea">
+							<showInfo alpha="1" rotation="0">
+								<bounds height="60" width="80" top="6" left="10"/>
+							</showInfo>
+							<drawStyle>
+								<colorFill color="[0xffffff,0xffffff]" alpha="[1,1]"/>
+							</drawStyle>
+							<event>
+								<show>
+									<baseEffect name="setFilters">
+										<halation strength="0.3" color="0"/>
+										<shadow alpha="0.3" offset="5" angle="45" color="0"/>
+									</baseEffect>
+								</show>
+							</event>
+						</viewItem>
+						<viewItem type="DrawArea" id="AlbumGradScreen">
+							<showInfo alpha="1" rotation="0">
+								<bounds height="60" width="80" top="6" left="10"/>
+							</showInfo>
+							<drawStyle>
+								<colorFill color="[0,0]" alpha="[0.4,0.4]"/>
+							</drawStyle>
+						</viewItem>
+						<viewItem type="DrawArea" id="KEY_VListVIImage">
+							<showInfo alpha="1" rotation="0">
+								<bounds height="50" width="74" top="8" left="13"/>
+							</showInfo>
+							<drawStyle>
+								<colorFill color="[0xffffff,0xffffff]" alpha="[1,1]"/>
+							</drawStyle>
+						</viewItem>
+						
+					</viewItem>	
+					
+					<viewItem type="TextArea" id="KEY_VListVICaption">
+						<showInfo alpha="1" rotation="0">
+							<bounds width="100" right="0" bottom="2" height="14" />
+						</showInfo>
+						<textStyle type="" showScrollBar="false">
+							<text></text>
+							<textFormat align="center" size="10" font="Arial" color="0xffffff" bold="false" italic="false" underlineBool="false"/>
+						</textStyle>
+					</viewItem>	
+
+					<event>
+						<show>
+							<baseEffect name="EffectAlpha" startTime="1" duration="12" startAlpha="0" endAlpha="1"/>
+						</show>
+						<select>
+							<baseEffect name="EffectScroll" startTime="0" duration="1" startY="itSelf" endY="0"  startX="itSelf" endX="itSelf" controlID="ThumbPic" tweenerType="easeOutBounce"/>
+							<baseEffect name="EffectAlpha" startTime="0" duration="1" startAlpha="1" endAlpha="0" controlID="AlbumGradScreen" tweenerType="easeOutCubic"/>
+						</select>
+						<mouseOver>
+							<baseEffect name="EffectScroll" startTime="0" duration="12" startY="itSelf" endY="0"  startX="itSelf" endX="itSelf" controlID="ThumbPic" tweenerType="easeOutBounce"/>
+							<baseEffect name="EffectAlpha" startTime="0" duration="6" startAlpha="1" endAlpha="0" controlID="AlbumGradScreen" tweenerType="easeOutCubic"/>
+						</mouseOver>
+						<mouseOut>
+							<baseEffect name="EffectAlpha" startTime="0" duration="6" startAlpha="0" endAlpha="1" controlID="AlbumGradScreen" tweenerType="easeOutCubic"/>
+							<baseEffect name="EffectScroll" startTime="0" duration="12" startY="itSelf" endY="5" startX="itSelf" endX="itSelf" controlID="ThumbPic" tweenerType="easeOutBounce"/>
+						</mouseOut>
+					</event>
+				</viewListItem>
+			</viewItem>
+			
+			<viewItem type="Button" id="btnNextAlbumPage">
+				<showInfo alpha="1" rotation="0">
+					<bounds right="5" vCenter="-2" width="30" height="45"/>
+				</showInfo>
+				<buttonStyle skinSrc="resource/res/others/template/btn/btnDown.swf"/>
+				<event>
+					<click>
+						<baseEffect name="nextAlbumPage"/>
+					</click>
+				</event>
+			</viewItem>
+			<event>
+				<show>
+					<baseEffect name="EffectMove" startTime="1" duration="36" direction="90" distance="-500" moveType="moveFrom" tweenerType="easeOutCubic"/>
+				</show>
+			</event>
+		</viewItem>
+		
+		<!-- ================================================================= -->
+
+		<!--Controler here-->
+		<viewItem type = "Group" id = "playControlBar">
+			<showInfo alpha="1" rotation="0">
+				<bounds top="0" left="0" right="0" height="24"/>
+			</showInfo>
+			
+			<viewItem type="DrawArea">
+				<showInfo alpha="1" rotation="0">
+					<bounds top="0" bottom="0" left="0" right="0"/>
+				</showInfo>
+				<drawStyle>
+					<colorFill color="[0,0]" alpha="[1,1]"/>
+				</drawStyle>
+			</viewItem>
+		
+			<viewItem type="Button" id="btnFullScreen">
+					<showInfo alpha="1" rotation="0">
+						<bounds right="0" vCenter="0" width="30" height="30"/>
+					</showInfo>
+					<buttonStyle skinSrc="resource/res/others/template/btn/btnFullScreen.swf"/>
+					<event>
+						<click>
+							<baseEffect name="fullScreen"/>
+						</click>
+					</event>
+				</viewItem>
+				
+				<viewItem type="SlideBar" id="KEY_SoundVolumeSlideBar">
+					<showInfo alpha="1" rotation="0">
+						<bounds right="25" vCenter="0" width="50" height="30"/>
+					</showInfo>
+					<slideStyle skinSrc="resource/res/others/template/btn/btnVolume.swf" changePosition="horizontal"/>
+				</viewItem>
+				
+				<!-- Next Btn here-->
+				<viewItem type="Button" id="btnPlayNext">
+					<showInfo alpha="1" rotation="0">
+						<bounds right="70" vCenter="0" width="30" height="30"/>
+					</showInfo>
+					<buttonStyle skinSrc="resource/res/others/template/btn/btnForward.swf"/>
+					<event>
+						<click>
+							<baseEffect name="viewNextPhoto"/>
+						</click>
+					</event>
+				</viewItem>
+				
+				<!--Pause/Auto btn here-->
+				<viewItem type="Group" id="KEY_AutoPlayGroupBtn">
+					<showInfo alpha="1" rotation="0">
+						<bounds right="90" vCenter="0" width="30" height="30"/>
+					</showInfo>
+					<viewItem type="Button" id="btnPause">
+						<showInfo alpha="1" rotation="0">
+							<bounds width="30" height="30"/>
+						</showInfo>
+						<buttonStyle skinSrc="resource/res/others/template/btn/btnPause.swf"/>
+						<event>
+							<hide>
+								<baseEffect name="EffectAlpha" startAlpha="1" endAlpha="0" startTime="0" duration="24" />
+							</hide>
+							<show>
+								<baseEffect name="EffectAlpha" startAlpha="0" endAlpha="1" startTime="0" duration="24" />
+							</show>
+						</event>
+					</viewItem>
+					<viewItem type="Button" id="btnAuto">
+						<showInfo alpha="1" rotation="0">
+							<bounds width="30" height="30"/>
+						</showInfo>
+						<buttonStyle skinSrc="resource/res/others/template/btn/btnAuto.swf"/>
+						<event>
+							<hide>
+								<baseEffect name="EffectAlpha" startAlpha="1" endAlpha="0" startTime="0" duration="24" />
+							</hide>
+							<show>
+								<baseEffect name="EffectAlpha" startAlpha="0" endAlpha="1" startTime="0" duration="24" />
+							</show>
+						</event>
+					</viewItem>
+					<state name="stateAuto">
+						<viewItem type="Button" id="btnPause">
+							<showInfo alpha="1" rotation="0" visible="true">
+								<bounds width="30" height="30"/>
+							</showInfo>
+						</viewItem>
+						<viewItem type="Button" id="btnAuto">
+							<showInfo alpha="1" rotation="0" visible="false">
+								<bounds width="30" height="30"/>
+							</showInfo>
+						</viewItem>
+					</state>
+					<state name="statePause">
+						<viewItem type="Button" id="btnPause">
+							<showInfo alpha="1" rotation="0" visible="false">
+								<bounds width="30" height="30"/>
+							</showInfo>
+						</viewItem>
+						<viewItem type="Button" id="btnAuto">
+							<showInfo alpha="1" rotation="0" visible="true">
+								<bounds width="30" height="30"/>
+							</showInfo>
+						</viewItem>
+					</state>
+				</viewItem>
+				<!--Pause/Auto btn end-->
+				
+				<!-- Backward btn here-->
+				<viewItem type="Button" id="btnPlayFront">
+					<showInfo alpha="1" rotation="0">
+						<bounds right="110" vCenter="0" width="30" height="30"/>
+					</showInfo>
+					<buttonStyle skinSrc="resource/res/others/template/btn/btnBackward.swf"/>
+					<event>
+						<click>
+							<baseEffect name="viewFrontPhoto"/>
+						</click>
+					</event>
+				</viewItem>
+				<!-- Backward btn end-->
+				
+				<viewItem type="TextArea" id="KEY_ImgCaptionArea">
+					<showInfo alpha="1" rotation="0">
+						<bounds left="6" right="175" height="20" vCenter = "0"/>
+					</showInfo>
+					<textStyle type="" showScrollBar="false">
+						<text></text>
+						<textFormat size="12" font="Arial" color="0xffffff"/>
+					</textStyle>
+				</viewItem>
+		</viewItem>
+		<!--Controler end-->
+			
+		<!--====================================================================-->
+	</state>
+	
+	<state name="albumState" baseOn="initState">
+		<!--viewItem type="Group" id="albumThumbGroup">
+			<showInfo alpha="1" rotation="0">
+				<bounds right="0" height="100" left="0"  top="-66"/>
+			</showInfo>
+		</viewItem-->
+		<viewItem type="Group" id="albumThumbGroup">
+			<showInfo alpha="1" rotation="0">
+				<bounds right="0" height="100" left="0"  top="24"/>
+			</showInfo>
+		</viewItem>
+		<viewItem type="Button" id="btnHideAlbum">
+			<showInfo alpha="1" rotation="0">
+				<bounds hCenter="0" bottom="0" width="150" height="10"/>
+			</showInfo>
+			<buttonStyle skinSrc="resource/res/others/template/btn/btnShowAlbum.swf"/>
+			<event>
+				<click>
+					<baseEffect name="changeState" toStateName="initState" controlID="KEY_Temp" />
+				</click>
+			</event>
+		</viewItem>
+		<viewItem type="Group" id="imageThumbGroup">
+			<showInfo alpha="1" rotation="0">
+				<bounds height="62" left="0" right="0" bottom="0"/>
+			</showInfo>
+		</viewItem>
+		<viewItem type="Button" id="btnHideThumb">
+			<showInfo alpha="1" rotation="0">
+				<bounds hCenter="0" top="0" width="150" height="10"/>
+			</showInfo>
+			<event>
+				<click>
+					<baseEffect name="changeState" toStateName="allHideState" controlID="KEY_Temp" />
+				</click>
+			</event>
+		</viewItem>
+		<!--viewItem type="Group" id="PlayArea">
+			<showInfo alpha="1" rotation="0">
+				<bounds top="34" bottom="62" left="6" right="6"/>
+			</showInfo>
+		</viewItem-->
+		<viewItem type="Group" id="PlayArea">
+			<showInfo alpha="1" rotation="0">
+				<bounds top="124" bottom="62" left="6" right="6"/>
+			</showInfo>
+		</viewItem>
+	</state>
+	
+	<state name="thumbState" baseOn="initState">
+		<viewItem type="Group" id="imageThumbGroup">
+			<showInfo alpha="1" rotation="0">
+				<bounds height="62" left="0" right="0" bottom="-52"/>
+			</showInfo>
+		</viewItem>
+		<viewItem type="Button" id="btnHideThumb">
+			<showInfo alpha="1" rotation="0">
+				<bounds hCenter="0" top="0" width="150" height="10"/>
+			</showInfo>
+			<buttonStyle skinSrc="resource/res/others/template/btn/btnShowThumb.swf"/>
+			<event>
+				<click>
+					<baseEffect name="changeState" toStateName="initState" controlID="KEY_Temp" />
+				</click>
+			</event>
+		</viewItem>
+		<viewItem type="Group" id="albumThumbGroup">
+			<!--showInfo alpha="1" rotation="0">
+				<bounds right="0" height="100" left="0"  top="24"/>
+			</showInfo-->
+			<showInfo alpha="1" rotation="0">
+				<bounds right="0" height="100" left="0"  top="-66"/>
+			</showInfo>
+		</viewItem>
+			
+		<viewItem type="Button" id="btnHideAlbum">
+			<showInfo alpha="1" rotation="0">
+				<bounds hCenter="0" bottom="0" width="150" height="10"/>
+			</showInfo>
+			<event>
+				<click>
+					<baseEffect name="changeState" toStateName="allHideState" controlID="KEY_Temp" />
+				</click>
+			</event>
+		</viewItem>
+		<viewItem type="Group" id="PlayArea">
+			<showInfo alpha="1" rotation="0">
+				<bounds top="34" bottom="10" left="6" right="6"/>
+			</showInfo>
+		</viewItem>
+	</state>
+	
+	<state name="allHideState" baseOn="initState">
+		<!--viewItem type="Group" id="albumThumbGroup">
+			<showInfo alpha="1" rotation="0">
+				<bounds right="0" height="100" left="0"  top="-66"/>
+			</showInfo>
+		</viewItem-->
+		<viewItem type="Group" id="albumThumbGroup">
+			<showInfo alpha="1" rotation="0">
+				<bounds right="0" height="100" left="0"  top="24"/>
+			</showInfo>
+		</viewItem>
+		<viewItem type="Button" id="btnHideAlbum">
+			<showInfo alpha="1" rotation="0">
+				<bounds hCenter="0" bottom="0" width="150" height="10"/>
+			</showInfo>
+			<buttonStyle skinSrc="resource/res/others/template/btn/btnShowAlbum.swf"/>
+			<event>
+				<click>
+					<baseEffect name="changeState" toStateName="thumbState" controlID="KEY_Temp" />
+				</click>
+			</event>
+		</viewItem>
+	
+		<viewItem type="Group" id="imageThumbGroup">
+			<showInfo alpha="1" rotation="0">
+				<bounds height="62" left="0" right="0" bottom="-52"/>
+			</showInfo>
+		</viewItem>
+		<viewItem type="Button" id="btnHideThumb">
+			<showInfo alpha="1" rotation="0">
+				<bounds hCenter="0" top="0" width="150" height="10"/>
+			</showInfo>
+			<buttonStyle skinSrc="resource/res/others/template/btn/btnShowThumb.swf"/>
+			<event>
+				<click>
+					<baseEffect name="changeState" toStateName="albumState" controlID="KEY_Temp" />
+				</click>
+			</event>
+		</viewItem>
+		
+		<!--viewItem type="Group" id="PlayArea">
+			<showInfo alpha="1" rotation="0">
+				<bounds top="34" bottom="10" left="6" right="6"/>
+			</showInfo>
+		</viewItem-->
+		<viewItem type="Group" id="PlayArea">
+			<showInfo alpha="1" rotation="0">
+				<bounds top="124" bottom="10" left="6" right="6"/>
+			</showInfo>
+		</viewItem>
+	</state>
+	
+	
+	<globalViews>
+		<albumStageViews  showType="stop" showDirection="bottom">
+	 		<!-- 相册对象显示数据 -->
+	 		<showTarget>
+		 		<showInfo alpha="1" rotation="0">
+					<bounds autoMaxWidth="-1" autoMaxHeight="-1" autoBoundsBool="true"/>
+					<!--bounds autoMaxWidth="420" autoMaxHeight="320" autoBoundBool="true"/-->
+				</showInfo>
+				<viewItem type="DrawArea">
+					<showInfo alpha="1" rotation="0">
+						<bounds top="0" left="0" right="0" bottom="0"/>
+					</showInfo>
+					<drawStyle>
+						<colorFill color="[0,0]" alpha="[1,1]"/>
+					</drawStyle>
+				</viewItem>
+				<viewItem type="DrawArea">
+					<showInfo alpha="1" rotation="0">
+						<bounds top="1" left="1" right="1" bottom="1"/>
+					</showInfo>
+					<drawStyle>
+						<colorFill color="[0xFFFFCC,0xFFFFCC]" alpha="[1,1]"/>
+					</drawStyle>
+				</viewItem>
+				<viewItem type="TextArea" id="KEY_VListVIDescription">
+					<showInfo alpha="1" rotation="0">
+						<bounds autoMaxWidth="-1" autoMaxHeight="-1" autoBoundsBool="true"/>
+					</showInfo>
+					<textStyle type="" showScrollBar="false">
+						<text></text>
+						<textFormat size="12" font="Arial" color="0" align="left"/>
+					</textStyle>
+				</viewItem>
+				<event>
+					<show>
+						<baseEffect name="EffectAlpha" startTime="1" duration="6" startAlpha="0" endAlpha="1"/>
+					</show>
+					<hide>
+						<baseEffect name="EffectAlpha" startTime="1" duration="6" startAlpha="1" endAlpha="0"/>
+					</hide>
+				</event>
+			</showTarget>
+	 	</albumStageViews>
+	 	
+	 	<thumbStageViews showType="stop" showDirection="top">
+	 		<!-- 图片对象显示数据 -->
+	 		<showTarget>
+		 		<showInfo alpha="1" rotation="0">
+					<bounds width="92" height="72"/>
+				</showInfo>
+			</showTarget>
+	 	</thumbStageViews>
+		
+		<scrollBar type="vertical">
+			<showInfo alpha="1" rotation="0">
+				<bounds width="15" height="15"/>
+			</showInfo>
+			<startArea>
+				<showInfo alpha="1" rotation="0">
+					<bounds width="15" height="15"/>
+				</showInfo>
+				<viewItem type="DrawArea">
+					<showInfo alpha="1" rotation="0">
+						<bounds left="0" right="0" top="0" bottom="0"/>
+					</showInfo>
+					<drawStyle>
+						<colorFill color="[0xff0000,0xff0000]" alpha="[0,0]"/>
+						<imageFill imgSrc="resource/res/others/template/btn/btnScrollUp.swf" fillType="stretch"/>
+					</drawStyle>
+				</viewItem>
+			</startArea>
+			
+			<scrollArea>
+				<showInfo alpha="1" rotation="0">
+					<bounds width="20" height="20"/>
+				</showInfo>
+				<viewItem type="DrawArea">
+					<showInfo alpha="1" rotation="0">
+						<bounds left="0" right="0" top="0" bottom="0"/>
+					</showInfo>
+					<drawStyle>
+						<colorFill color="[0x606060,0x606060]" alpha="[1,1]"/>
+					</drawStyle>
+				</viewItem>
+			</scrollArea>
+			
+			<endArea>
+				<showInfo alpha="1" rotation="0">
+					<bounds width="15" height="15"/>
+				</showInfo>
+				<viewItem type="DrawArea">
+					<showInfo alpha="1" rotation="0">
+						<bounds left="0" right="0" top="0" bottom="0" />
+					</showInfo>
+					<drawStyle>
+						<colorFill color="[0xff0000,0xff0000]" alpha="[0,0]"/>
+						<imageFill imgSrc="resource/res/others/template/btn/btnScrollDown.swf" fillType="stretch"/>
+					</drawStyle>
+				</viewItem>
+			</endArea>
+			
+			<backArea>
+				<showInfo alpha="1" rotation="0">
+					<bounds width="15" height="15"/>
+				</showInfo>
+				<viewItem type="DrawArea">
+					<showInfo alpha="0.5" rotation="0">
+						<bounds left="0" right="0" top="0" bottom="0" />
+					</showInfo>
+					<drawStyle>
+						<colorFill color="[0x333333,0x333333]" alpha="[0.5,0.5]"/>
+					</drawStyle>
+				</viewItem>
+			</backArea>
+		</scrollBar>
+		
+		<scrollBar type="horizontal">
+			<showInfo alpha="1" rotation="0">
+				<bounds width="15" height="15"/>
+			</showInfo>
+			<startArea>
+				<showInfo alpha="1" rotation="0">
+					<bounds width="15" height="15"/>
+				</showInfo>
+				<viewItem type="DrawArea">
+					<showInfo alpha="1" rotation="0">
+						<bounds left="0" right="0" top="0" bottom="0"/>
+					</showInfo>
+					<drawStyle>
+						<colorFill color="[0xff0000,0xff0000]" alpha="[0,0]"/>
+						<imageFill imgSrc="resource/res/others/template/btn/btnScrollLeft.swf" fillType="stretch"/>
+					</drawStyle>
+				</viewItem>
+			</startArea>
+			
+			<scrollArea>
+				<showInfo alpha="1" rotation="0">
+					<bounds width="20" height="20"/>
+				</showInfo>
+				<viewItem type="DrawArea">
+					<showInfo alpha="1" rotation="0">
+						<bounds left="0" right="0" top="0" bottom="0"/>
+					</showInfo>
+					<drawStyle>
+						<colorFill color="[0x606060,0x606060]" alpha="[1,1]"/>
+					</drawStyle>
+				</viewItem>
+			</scrollArea>
+			
+			<endArea>
+				<showInfo alpha="1" rotation="0">
+					<bounds width="15" height="15"/>
+				</showInfo>
+				<viewItem type="DrawArea">
+					<showInfo alpha="1" rotation="0">
+						<bounds left="0" right="0" top="0" bottom="0" />
+					</showInfo>
+					<drawStyle>
+						<colorFill color="[0xff0000,0xff0000]" alpha="[0,0]"/>
+						<imageFill imgSrc="resource/res/others/template/btn/btnScrollRight.swf" fillType="stretch"/>
+					</drawStyle>
+				</viewItem>
+			</endArea>
+			
+			<backArea>
+				<showInfo alpha="1" rotation="0">
+					<bounds width="15" height="15"/>
+				</showInfo>
+				<viewItem type="DrawArea">
+					<showInfo alpha="1" rotation="0">
+						<bounds left="0" right="0" top="0" bottom="0" />
+					</showInfo>
+					<drawStyle>
+						<colorFill color="[0x333333,0x333333]" alpha="[1,1]"/>
+					</drawStyle>
+				</viewItem>
+			</backArea>
+		</scrollBar>
+	</globalViews>
+</templete>
